@@ -1,6 +1,5 @@
 package xyz.vanilla.anticheat;
 
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.vanilla.anticheat.managers.DetectionManager;
 import xyz.vanilla.anticheat.managers.ListenerInjection;
