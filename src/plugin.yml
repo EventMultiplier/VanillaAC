@@ -1,0 +1,5 @@
+name: VanillaAC
+description: AntiCheat for Minecraft! Supports most versions
+authors: [EventMultiplier, ItzSomebodys]
+version: 1.0
+main: xyz.vanilla.anticheat.Vanilla
