@@ -8,19 +8,13 @@ import xyz.vanilla.anticheat.inject.VanillaInjected;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetectionManager extends VanillaInjected
-{
+public class DetectionManager extends VanillaInjected {
 
-    private List<Detection> detections = new ArrayList<>();
+	private List<Detection> detections = new ArrayList<>();
 
-    public DetectionManager(Vanilla plugin)
-    {
-        super(plugin);
-    }
+	public void registerDetections() {
+		detections.add(new ExampleDetection());
+		detections.stream().forEach(Vanilla.getInstance().getListenerInjection()::injectListeners);
+	}
 
-    public void registerDetections()
-    {
-        detections.add(new ExampleDetection(getInstance()));
-        detections.stream().forEach(getInstance().getListenerInjection()::injectListeners);
-    }
 }
